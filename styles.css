@@ -8,6 +8,14 @@
   --font-display: "Bellefair", serif;
   --font-condensed: "Barlow Condensed", sans-serif;
   --font-body: "Barlow", sans-serif;
+
+  --duration: 0.25s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration: 0s;
+  }
 }
 
 /* ---------- Reset / base ---------- */
@@ -106,6 +114,7 @@ body.technology {
 .site-header {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem;
@@ -162,10 +171,6 @@ body.technology {
   gap: 0.5rem 1.5rem;
 }
 
-.site-header {
-  flex-wrap: wrap;
-}
-
 .primary-nav {
   flex-basis: 100%;
   margin-top: 1rem;
@@ -183,18 +188,19 @@ body.technology {
   width: min(15.875rem, 100%);
   margin: 0;
   padding: 7.375rem 0 0 2rem;
+  overflow-y: auto;
   background: rgb(255 255 255 / 0.04);
   -webkit-backdrop-filter: blur(2.5rem);
   backdrop-filter: blur(2.5rem);
   transform: translateX(100%);
   visibility: hidden;
-  transition: transform 0.25s ease, visibility 0s linear 0.25s;
+  transition: transform var(--duration) ease, visibility 0s linear var(--duration);
 }
 
 .js .primary-nav.is-open {
   transform: none;
   visibility: visible;
-  transition: transform 0.25s ease;
+  transition: transform var(--duration) ease;
 }
 
 .js .primary-nav ul {
@@ -292,7 +298,7 @@ main {
   background: var(--white) content-box;
   border-radius: 50%;
   opacity: 0.17;
-  transition: opacity 0.2s;
+  transition: opacity var(--duration);
 }
 
 .dots a:hover {
@@ -320,7 +326,7 @@ main {
   font-family: var(--font-display);
   font-size: 1rem;
   letter-spacing: 0.0625em;
-  transition: border-color 0.2s;
+  transition: border-color var(--duration);
 }
 
 .numbers a:hover {
@@ -380,7 +386,7 @@ main {
   font-size: 1.25rem;
   letter-spacing: 0.0625em;
   text-transform: uppercase;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow var(--duration) ease;
 }
 
 .explore:hover,
@@ -1048,10 +1054,3 @@ main {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    transition-duration: 0s !important;
-  }
-}
