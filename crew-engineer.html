@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Space tourism: pick a destination, meet the crew and discover the technology behind your trip.">
+  <title>Anousheh Ansari | Space tourism website</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400&family=Bellefair&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="menu.js" defer></script>
+</head>
+<body class="crew">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="logo" href="index.html"><img src="assets/shared/logo.svg" alt="Space tourism, home" width="48" height="48"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <img class="icon-open" src="assets/shared/icon-hamburger.svg" alt="" width="24" height="21">
+      <img class="icon-close" src="assets/shared/icon-close.svg" alt="" width="20" height="21">
+      <span class="sr-only">Menu</span>
+    </button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html"><span class="nav-index" aria-hidden="true">00</span> Home</a></li>
+          <li><a href="destination-moon.html"><span class="nav-index" aria-hidden="true">01</span> Destination</a></li>
+          <li><a href="crew-commander.html" aria-current="page"><span class="nav-index" aria-hidden="true">02</span> Crew</a></li>
+          <li><a href="technology-vehicle.html"><span class="nav-index" aria-hidden="true">03</span> Technology</a></li>
+        </ul>
+    </nav>
+  </header>
+  <main id="main" class="main-crew">
+    <h1 class="page-title"><span class="page-title-index" aria-hidden="true">02</span> Meet your crew</h1>
+    <picture class="crew-image">
+      <source type="image/webp" srcset="assets/crew/image-anousheh-ansari.webp">
+      <img src="assets/crew/image-anousheh-ansari.png" alt="Portrait of Anousheh Ansari" width="568" height="712">
+    </picture>
+    <div class="crew-body">
+      <nav class="dots" aria-label="Crew members">
+        <ul>
+          <li><a href="crew-commander.html"><span class="sr-only">Douglas Hurley, Commander</span></a></li>
+          <li><a href="crew-specialist.html"><span class="sr-only">Mark Shuttleworth, Mission Specialist</span></a></li>
+          <li><a href="crew-pilot.html"><span class="sr-only">Victor Glover, Pilot</span></a></li>
+          <li><a href="crew-engineer.html" aria-current="page"><span class="sr-only">Anousheh Ansari, Flight Engineer</span></a></li>
+        </ul>
+      </nav>
+      <div class="crew-text">
+        <h2 class="crew-heading"><span class="role">Flight Engineer</span> <span class="name">Anousheh Ansari</span></h2>
+        <p class="description">Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space.</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

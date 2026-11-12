@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Space tourism: pick a destination, meet the crew and discover the technology behind your trip.">
+  <title>Spaceport | Space tourism website</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400&family=Bellefair&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="menu.js" defer></script>
+</head>
+<body class="technology">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="logo" href="index.html"><img src="assets/shared/logo.svg" alt="Space tourism, home" width="48" height="48"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <img class="icon-open" src="assets/shared/icon-hamburger.svg" alt="" width="24" height="21">
+      <img class="icon-close" src="assets/shared/icon-close.svg" alt="" width="20" height="21">
+      <span class="sr-only">Menu</span>
+    </button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html"><span class="nav-index" aria-hidden="true">00</span> Home</a></li>
+          <li><a href="destination-moon.html"><span class="nav-index" aria-hidden="true">01</span> Destination</a></li>
+          <li><a href="crew-commander.html"><span class="nav-index" aria-hidden="true">02</span> Crew</a></li>
+          <li><a href="technology-vehicle.html" aria-current="page"><span class="nav-index" aria-hidden="true">03</span> Technology</a></li>
+        </ul>
+    </nav>
+  </header>
+  <main id="main" class="main-technology">
+    <h1 class="page-title"><span class="page-title-index" aria-hidden="true">03</span> Space launch 101</h1>
+    <picture class="tech-image">
+      <source media="(min-width: 64em)" srcset="assets/technology/image-spaceport-portrait.jpg">
+      <img src="assets/technology/image-spaceport-landscape.jpg" alt="" width="768" height="310">
+    </picture>
+    <div class="tech-body">
+      <nav class="numbers" aria-label="Technologies">
+        <ul>
+          <li><a href="technology-vehicle.html"><span aria-hidden="true">1</span><span class="sr-only">Launch vehicle</span></a></li>
+          <li><a href="technology-spaceport.html" aria-current="page"><span aria-hidden="true">2</span><span class="sr-only">Spaceport</span></a></li>
+          <li><a href="technology-capsule.html"><span aria-hidden="true">3</span><span class="sr-only">Space capsule</span></a></li>
+        </ul>
+      </nav>
+      <div class="tech-text">
+        <h2><span class="label">The terminology…</span> <span class="name">Spaceport</span></h2>
+        <p class="description">A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
